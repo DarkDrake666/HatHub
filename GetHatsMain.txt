@@ -15,6 +15,6 @@ local success, err = pcall(function() loadstring(game:HttpGet("https://raw.githu
 end)
 
 if not success then
-    local Notify = loadstring(game:HttpGet("https://obama-is-a-nig.ga/scripts/Notification.txt"))();
-    Notify:Notification("Error", "An error occured while executing kkeyy's get hat script!", 5);
+    local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/HatHub/main/GetHatsNotification.txt"))();
+    Notify:Notification("Error", "An error occured while executing GamerBoi's get hat script!", 5);
 end
