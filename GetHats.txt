@@ -1,0 +1,66 @@
+--// Waiting till game is loaded
+repeat task.wait() until game:IsLoaded()
+
+
+--// Variables
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Prefix = _G.Prefix
+
+
+--// Functions
+local function lwr(msg, msg2)
+    if string.lower(msg) == Prefix..msg2 then 
+        return true
+    end
+end
+local function Fire(msg)
+    require(LocalPlayer.PlayerScripts.ChatScript.ChatMain).MessagePosted:fire(msg)
+end
+
+
+--// Checking game
+if game.PlaceId == 5100950559 then
+    LocalPlayer.Chatted:Connect(function(msg)
+        if lwr(msg, "hand") then
+            Fire("-gh 4855525473,8337370,48474313,48474294,451220849,62724852,20372960,63690008,62234425,376524487")
+            
+        elseif lwr(msg, "sex") or lwr(msg, "doll") or lwr(msg, "sex doll") or lwr(msg, "sexdoll") then
+            Fire("-gh 4904137145,4246228452,4911305457,4822592866,3992084515,14815761,48474294,63690008,62234425,451220849")
+        
+        elseif lwr(msg, "plane") then
+            Fire("-gh 4025460572,1532389,191101707,4332375148,4708069539")
+        
+        elseif lwr(msg, "car") or lwr(msg, "vroom vroom") then
+            Fire("-gh 4435389917,191101707")
+        
+        elseif lwr(msg, "pp") or lwr(msg, "penis") or lwr(msg, "dick") or lwr(msg, "sausage") then
+            Fire("-gh 17614451,4246228452,3992084515,63690008")
+        
+        elseif lwr(msg, "911 plane") or lwr(msg, "police plane") or lwr(msg, "911plane") or lwr(msg, "policeplane") then
+            Fire("-gh 4690305028,4627469896,4623675984,4602619613,4315489767,4794315940,4461505493,4461584953")
+        
+        elseif lwr(msg, "911") or lwr(msg, "police") then
+            Fire("-gh 4998547654,28171753,20372960,62234425,63690008,62724852,451220849")
+        
+        elseif lwr(msg, "bike") or lwr(msg, "motorbike") then
+            Fire("-gh 191101707,5063566353")
+        
+        elseif lwr(msg, "shidashian") or lwr(msg, "shidash") or lwr(msg, "shid") then
+            Fire("-gh 3806215779,5132802731,31151864,27345567,24826811,24826755")
+        
+        elseif lwr(msg, "board") or lwr(msg, "hoverboard") then
+            Fire("-gh 28171753,191101707,451220849,63690008")
+        
+        elseif lwr(msg, "trashcan") or lwr(msg, "trash") or lwr(msg, "can") then
+            Fire("-gh 4735336570,4735272012")
+        
+        elseif lwr(msg, "fairy") then
+            Fire("-gh 150381051")
+             
+        elseif lwr(msg, "test") then
+             Fire("-gh 63690008")
+       
+         end
+    end)
+end
