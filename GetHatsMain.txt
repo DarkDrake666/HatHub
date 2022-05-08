@@ -3,6 +3,7 @@ repeat task.wait() until game:IsLoaded()
 
 --------------------------------------------------------------------------------------
 
+local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/HatHub/main/GetHatsNotification.txt"))();
 
 if getgenv().executed then
     return warn("Script is already executed!");
@@ -11,9 +12,9 @@ else
 end
 
 local success, err = pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/HatHub/main/GetHats.txt"))();
+   Notify:Notification("Success", "GamerBoi's hat script was successfully executed!", 5);
 end)
 
 if not success then
-    local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/HatHub/main/GetHatsNotification.txt"))();
-    Notify:Notification("Error", "An error occured while executing GamerBoi's get hat script!", 5);
+    Notify:Notification("Error", "Something happened while loading GamerBoi's hat script, maybe check your executor?", 10);
 end
