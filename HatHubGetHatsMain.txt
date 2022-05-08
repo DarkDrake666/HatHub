@@ -1,0 +1,27 @@
+_G.Prefix = ";" -- Customize your Prefix
+
+--[[
+
+Made by GamerBoi#5042 on discord.
+
+Commands:
+hand (Loads up hand hats.)
+doll (Loads up sexdoll hats.)
+plane (Loads up plane hats.)
+car (Loads up car hats.)
+pp (Loads up penis hats.)
+911 plane (Loads up 911 plane hats.)
+911 (Loads up 911 hats.)
+bike (Loads up bike hats.)
+shidashian (Loads up shidashian hats.)
+hoverboard (Loads up hoverboard hats.)
+trashcan (Loads up trashcan hats.)
+fairy (Loads up fairy hats.)
+
+There are other aliases for the get hats, I just didn't include them here.
+
+Please note that this works best when put in your autoexc folder.
+
+--]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/HatHub/main/GetHatsMain.txt"))()
