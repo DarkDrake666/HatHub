@@ -10,12 +10,15 @@ local Prefix = _G.Prefix
 
 --// Functions
 local function lwr(msg, msg2)
-    if string.lower(msg) == Prefix..msg2 then 
+    if string.lower(msg) == Prefix..msg2 then
         return true
     end
 end
 local function Fire(msg)
-    require(LocalPlayer.PlayerScripts.ChatScript.ChatMain).MessagePosted:fire(msg)
+    local ChatBar = game.Players.LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+    ChatBar:SetTextFromInput(msg)
+    game.Players:Chat(msg)
+    ChatBar.Text = ""
 end
 
 
